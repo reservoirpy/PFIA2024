@@ -29,3 +29,5 @@
 > pip install reservoirpy
 >
 > pip install -r requirements.txt
+
+[! What you should see when starting the tutorial](tuto-jupyter-reservoirpy-PFIA2024.jpg)

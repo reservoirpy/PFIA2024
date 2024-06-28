@@ -1,0 +1,5 @@
+reservoirpy[hyper]>=0.3.10
+numpy>=1.21.1
+matplotlib>=2.2.0
+pandas
+ipykernel

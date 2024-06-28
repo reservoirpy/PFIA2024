@@ -1,33 +1,40 @@
-(English below)
-## Tutoriel pour la bibliothèque ReservoirPy présenté à la conférence PFIA 2024 (La Rochelle, July 2024)
-/!\ (à traduire)
+# PFIA 2024 - Tutoriel Reservoir Computing & ReservoirPy (La Rochelle, juillet 2024)
 
-0. Open a terminal on your machine with Python already installed (at least Python 3.7 version), and type the following commands
 
-1. Clone this "PFIA2024" repository on your computer to follow the tutorial coding part.
+![Capture d'écran du début du tutoriel](./static/capture.png)
 
-> git clone git@github.com:reservoirpy/PFIA2024.git
+## Installation
 
-2. Install ReservoirPy and requirements on your computer using pip
+### En local
 
-> pip install reservoirpy
->
-> pip install -r requirements.txt
+1. Clonez le dépôt
+    - Dans le terminal: `git clone git@github.com:reservoirpy/PFIA2024.git`
+    - Ou directement sur GitHub: Code -> Download ZIP
 
----  
+2. Installez les dépendances du tutoriel
 
-## Tutorial for ReservoirPy library presented at the PFIA 2024 conference (La Rochelle, July 2024)
+    Dans le dossier: `pip install -r requirements.txt`
 
-0. Open a terminal on your machine with Python already installed (at least Python 3.7 version), and type the following commands
+### Sur Google Colab
 
-1. Clone this "PFIA2024" repository on your computer to follow the tutorial coding part.
+Fichier -> Ouvrir le notebook -> GitHub -> `reservoirpy/PFIA2024` -> Tutorial
 
-> git clone git@github.com:reservoirpy/PFIA2024.git
+Vous devrez également télécharger les données directement depuis le code Python.
 
-2. Install ReservoirPy and requirements on your computer using pip
+##### Pour le dataset RTE (prédiction)
 
-> pip install reservoirpy
->
-> pip install -r requirements.txt
+```python
+dataset = pd.read_csv("https://raw.githubusercontent.com/reservoirpy/PFIA2024/master/datasets/conso_electricite_rte.csv")
+```
 
-[! What you should see when starting the tutorial](tuto-jupyter-reservoirpy-PFIA2024.jpg)
+##### Pour le dataset FordA (classification)
+```python
+!pip install requests
+import pickle
+import requests
+from io import BytesIO
+
+response = requests.get('https://raw.githubusercontent.com/reservoirpy/PFIA2024/master/datasets/FordA.p')
+
+fordA = pickle.load(BytesIO(response.content))
+```

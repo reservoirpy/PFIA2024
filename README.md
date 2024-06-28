@@ -7,4 +7,5 @@
 2. Install ReservoirPy and requirements on your computer using pip
 
 > pip install reservoirpy
+>
 > pip install -r requirements.txt
